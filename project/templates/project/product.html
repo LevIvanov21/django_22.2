@@ -1,0 +1,25 @@
+{% extends 'product/base.html' %}
+{% load static %}
+{% load images_tag %}
+
+
+{% block content %}
+<div class="card mx-auto" style="width: 18rem;">
+    <img src="{% images_tag object.image %}" class="card-img-top" alt={{object.name}}>
+    <div class="card-body mx-20">
+        <form method="post" enctype="multipart/form-data"></form>
+        <h5 class="card-title">{{object.name}}</h5>
+        <p class="card-text">{{object.description}}</p>
+        <p class="card-text">Категория: {{object.category}}</p>
+        <p class="card-text">Создан: {{object.created_at}}</p>
+        <p class="card-text">Изменён: {{object.updated_at}}</p>
+        <p class="card-text">Цена: {{object.price_to_buy}}₽</p>
+        <p class="card-text">Разместил: {{object.owner}}</p>
+        <a href="#" class="btn btn-primary">Купить</a>
+        {% if user == object.owner or perms.catalog.edit_publication and perms.catalog.edit_description and perms.catalog.edit_categories %}
+            <a href="edit/{{object.pk}}" class="btn btn-primary">Редактировать</a>
+            <a href="delete/{{object.pk}}" class="btn btn-danger position-center">Удалить</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
