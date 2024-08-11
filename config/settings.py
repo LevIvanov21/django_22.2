@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'project',
     'users',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -142,12 +143,28 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
-CACHE_ENABLED = os.getenv('CACHE_ENABLED') == 'True'
+# EMAIL_SETTINGS
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_HOST_USER = os.getenv('EMAIL_ADDRESS')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+EMAIL_USE_TLS = True if os.getenv('EMAIL_USE_TLS') else False
+EMAIL_USE_SSL = True if os.getenv('EMAIL_USE_TLS') else False
 
+LOGIN_REDIRECT_URL = "project:product"
+LOGIN_URL = "users:login"
+LOGOUT_REDIRECT_URL = "project:product"
+
+AUTH_USER_MODEL = "users.User"
+
+# для того чтобы не отправлять письма физически, а только в консоли
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+CACHE_ENABLED = os.getenv('CACHE_ENABLED') == 'True'
 if CACHE_ENABLED:
     CACHES = {
         "default": {
             "BACKEND": "django.core.cache.backends.redis.RedisCache",
-            "LOCATION": os.getenv('CACHES_LOCATION'),
+            "LOCATION": os.getenv('CACHE_LOCATION'),
         }
     }
