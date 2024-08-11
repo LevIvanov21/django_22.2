@@ -10,7 +10,6 @@ from project.models import Product, Version, Category
 from project.services import get_category_from_cache
 
 
-
 class indexListView(ListView, LoginRequiredMixin):
     model = Product
     template_name = 'project/home.html'
