@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'project/base.html' %}
+{% load static %}
+{% load images_tag %}
+
+
+
+{% block content %}
+<h1 align="center">{{object.title}}</h1>
+<p>{{object.body}}</p>
+<div align="center">
+  {% if object.preview %}
+  <img src="{% images_tag object.preview %}" alt="404 но мы уже чиним..">
+  {% endif %}
+</div>
+<p align="right">
+  Количество просмотров: {{object.views_count}}
+</p>
+{% endblock %}
