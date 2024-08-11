@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'project/base.html' %}
+{% load static %}
+{% load images_tag %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        {% for object in objects_list %}
+        <div class="col-3">
+            <div class="card">
+                {% if object.preview %}
+                <img src="{% images_tag object.preview %}" class="card-img-top" alt="404 но мы уже чиним...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{object.title}}</h5>
+                    <p class="card-text">{{object.body|slice:100}}</p>
+                    <a class="btn btn-block btn-outline-primary" href="view/{{object.pk}}" role="button">Прочесть
+                        полностью</a>
+                    {% if user.is_authenticated %}
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Действия
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <a class="btn btn-block btn btn-primary" href="edit/{{object.pk}}" role="button">Редактировать</a>
+                            {% if object.is_published %}
+                            <a class="btn btn-block btn btn-warning" href="published/{{object.pk}}" role="button">Снять
+                                с публикации</a>
+                            {% else %}
+                            <a class="btn btn-block btn btn-success" href="published/{{object.pk}}" role="button">Опубликовать</a>
+                            {% endif %}
+                            <a class="btn btn-block btn btn-danger" href="delete/{{object.pk}}"
+                               role="button">Удалить</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
