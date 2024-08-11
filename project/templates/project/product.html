@@ -1,4 +1,4 @@
-{% extends 'product/base.html' %}
+{% extends 'project/base.html' %}
 {% load static %}
 {% load images_tag %}
 
@@ -16,7 +16,7 @@
         <p class="card-text">Цена: {{object.price_to_buy}}₽</p>
         <p class="card-text">Разместил: {{object.owner}}</p>
         <a href="#" class="btn btn-primary">Купить</a>
-        {% if user == object.owner or perms.catalog.edit_publication and perms.catalog.edit_description and perms.catalog.edit_categories %}
+        {% if user == object.owner or perms.project.edit_publication and perms.project.edit_description and perms.project.edit_categories %}
             <a href="edit/{{object.pk}}" class="btn btn-primary">Редактировать</a>
             <a href="delete/{{object.pk}}" class="btn btn-danger position-center">Удалить</a>
         {% endif %}
