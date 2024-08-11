@@ -1,1 +1,1 @@
-django_22.2
+django_23.1
