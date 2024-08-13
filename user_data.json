@@ -1,0 +1,134 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$s4GeQmzMC50LqDJfvtNYXq$vQU6s4cLbwtljhtKabmedWI1LXJRG3wtcCPN2bG0u+s=",
+      "last_login": "2024-07-29T20:10:41.258Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-29T20:10:14.658Z",
+      "email": "leevivanov@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_verified": false,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$6yWxnQLyVeDEYQWpV8cOuN$aqhkZudYallUAEy3TcJ3F3R2M4a0iw8e2eLmLQVY2WM=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-04T21:09:49.350Z",
+      "email": "project@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_verified": false,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$4wINsxhbxPj7RpQhCfnYf6$65bldvsaU1s367PcdvrRYGwAmymoG9Kj6kDsMK7qMjY=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-04T21:18:03.697Z",
+      "email": "levivanov@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_verified": false,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$3XDlqAuTRThFvgEZAvrRf0$jXrjUZENBup3F8+tNCNVUrMa4bHYPeCSbFWpKNIVwdE=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-04T21:33:40.049Z",
+      "email": "lev@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_verified": false,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$4opY9ysDrycPRkFpVO91DH$xV/OiM1QQVq2pIhPyDoqWVZzoNkzDIfjZyqW41QvT8A=",
+      "last_login": "2024-08-11T17:52:22.540Z",
+      "is_superuser": true,
+      "first_name": "admin",
+      "last_name": "Skypro",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-08-11T17:00:29.362Z",
+      "email": "admin@sky.pro",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "is_verified": false,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "televizor01",
+      "last_login": "2024-08-11T17:54:48Z",
+      "is_superuser": false,
+      "first_name": "Mark",
+      "last_name": "Markov",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-11T17:54:26Z",
+      "email": "mark@sky.pro",
+      "phone": "89876706500",
+      "avatar": "users/daniar-joldoshbekov-final-118_w2ceJ5x_d8f6cB2.jpg",
+      "country": "Russua",
+      "is_verified": true,
+      "token": "lkjhgfdsa",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
